@@ -3,7 +3,7 @@ import { createCookieSessionStorage } from '@remix-run/node'
 export const authSessionStorage = createCookieSessionStorage({
 	cookie: {
 		name: 'en_session',
-		sameSite: 'lax', // CSRF protection is advised if changing to 'none'
+		sameSite: 'lax',
 		path: '/',
 		httpOnly: true,
 		secrets: process.env.SESSION_SECRET.split(','),
